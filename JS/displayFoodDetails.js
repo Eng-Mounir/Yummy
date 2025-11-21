@@ -67,3 +67,5 @@ if (mealId) {
 } else {
     row.innerHTML = "<p class='text-white'>No meal ID provided.</p>";
 }
+
+

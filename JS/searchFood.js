@@ -79,3 +79,6 @@ getSearchName("a");
 function mealClicked(idMeal) {
     window.location.href = `foodDetails.html?id=${idMeal}`;
 }
+
+
+
