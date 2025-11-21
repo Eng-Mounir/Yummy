@@ -1,3 +1,5 @@
+//this is common with are . search , category and ingerdiance
+
 const row = document.querySelector(".row");
 
 // Get meal ID from URL
