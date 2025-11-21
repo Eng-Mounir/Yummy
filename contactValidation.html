@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="icon" type="image/png" href="imgs/logo.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+    <!-- LEFT FIXED MINI NAVBAR -->
+    <div class="left-navbar d-flex flex-column justify-content-between align-items-center">
+
+        <!-- Logo -->
+        <img src="imgs/logo.png" class="logo-img" alt="logo">
+
+        <!-- Open Button -->
+        <div id="openSidebar" class="menu-btn fs-1 fw-bold">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Bottom Icons -->
+        <div class="bottom-icons d-flex flex-column gap-3">
+            <i class="fa-solid fa-globe"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+        </div>
+    </div>
+
+    <!-- SLIDING SIDEBAR -->
+    <div id="sidebar" class="sidebar text-white p-3 d-flex flex-column justify-content-between">
+        <ul class="list-unstyled px-3 fs-5">
+            <li class="py-2 "><a href="searchFood.html" class="text-white text-decoration-none">Search</a></li>
+            <li class="py-2">
+                <a href="category.html" class="text-white text-decoration-none">Categories</a>
+            </li>
+
+            <li class="py-2"><a href="#" class="text-white text-decoration-none">Area</a></li>
+            <li class="py-2"><a href="#" class="text-white text-decoration-none">Ingredients</a></li>
+            <li class="py-2"><a href="contactValidation.html" class="text-white text-decoration-none">Contact Us</a>
+            </li>
+        </ul>
+        <footer>
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="footer">
+                <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="content" class="content">
+        <div class="container-50 py-5">
+
+            <form id="contactForm" onsubmit="return validateForm()">
+                <div class="contact-content d-flex justify-content-center align-items-center vh-100">
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <input id="userName" onkeyup="validateName()" type="text" class="form-control"
+                                placeholder="Enter Your Name">
+                            <p id="nameMsg" class="text-danger d-none">Name must be at least 3 characters</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input id="userEmail" onkeyup="validateEmail()" type="email" class="form-control"
+                                placeholder="Enter Your Email">
+                            <p id="emailMsg" class="text-danger d-none">Enter a valid email</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input id="userPhone" onkeyup="validatePhone()" type="text" class="form-control"
+                                placeholder="Enter Your Phone">
+                            <p id="phoneMsg" class="text-danger d-none">Valid Egyptian number (010/011/012/015)</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input id="userAge" onkeyup="validateAge()" type="number" class="form-control"
+                                placeholder="Enter Your Age">
+                            <p id="ageMsg" class="text-danger d-none">Age must be between 16 and 80</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input id="userPass" onkeyup="validatePass()" type="password" class="form-control"
+                                placeholder="Enter Your Password">
+                            <p id="passMsg" class="text-danger d-none">Password must be 8+ characters</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input id="userRepass" onkeyup="validateRepass()" type="password" class="form-control"
+                                placeholder="Re-enter Password">
+                            <p id="repassMsg" class="text-danger d-none">Passwords do not match</p>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-dark w-100">Submit</button>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script src="JS/main.js"></script>
+    <script src="JS/contactValidation.js"></script>
+
+</body>
+
+</html>

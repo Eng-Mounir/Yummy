@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Food Search</title>
+    <link rel="icon" type="image/png" href="imgs/logo.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body><!-- LEFT FIXED MINI NAVBAR -->
+    <div class="left-navbar d-flex flex-column justify-content-between align-items-center">
+
+        <!-- Logo -->
+        <img src="imgs/logo.png" class="logo-img" alt="logo">
+
+        <!-- Open Button -->
+        <div id="openSidebar" class="menu-btn fs-1 fw-bold">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Bottom Icons -->
+        <div class="bottom-icons d-flex flex-column gap-3">
+            <i class="fa-solid fa-globe"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+        </div>
+    </div>
+
+    <!-- SLIDING SIDEBAR -->
+    <div id="sidebar" class="sidebar text-white p-3 d-flex flex-column justify-content-between">
+        <ul class="list-unstyled px-3 fs-5">
+            <li class="py-2 "><a href="searchFood.html" class="text-white text-decoration-none">Search</a></li>
+            <li class="py-2">
+                <a href="category.html" class="text-white text-decoration-none">Categories</a>
+            </li>
+
+            <li class="py-2"><a href="#" class="text-white text-decoration-none">Area</a></li>
+            <li class="py-2"><a href="#" class="text-white text-decoration-none">Ingredients</a></li>
+            <li class="py-2"><a href="contactValidation.html" class="text-white text-decoration-none">Contact Us</a>
+            </li>
+        </ul>
+        <footer>
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="footer">
+                <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <div class="container py-5">
+        <h1 class="text-center mb-4 text-white">Food Search</h1>
+        <div class="allFields row g-4">
+            <!-- Search by Name -->
+            <div class=" p-3 mb-4 col-6">
+                <h5 class="text-white">Search by Meal Name</h5>
+                <input type="text" class="form-control mb-3 searchName" placeholder="e.g. Chicken, Pasta">
+            </div>
+
+            <!-- Search by First Letter -->
+            <div class="p-3 mb-4 col-6">
+                <h5 class="text-white">Search by First Letter</h5>
+                <input type="text" id="searchLetter" maxlength="1" class="form-control mb-3"
+                    placeholder="Enter a letter (a–z)">
+            </div>
+        </div>
+        <!-- PAGE CONTENT -->
+        <div id="content" class="content">
+
+            <div class="row row-cols-1 row-cols-md-4 g-3 justify-content-center">
+
+                <!-- <div class="col">
+                            <div class="image-content position-relative">
+                                <div
+                                    class="layer bg-dark position-absolute top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center text-white">
+                                    <h3>hello</h3>
+                                    <p>alo</p>
+                                </div>
+        
+                                <img src="imgs/1.jpg" class="img-fluid">
+                            </div>
+                        </div> -->
+
+            </div>
+
+
+        </div>
+    </div>
+    <script src="JS/main.js"></script>
+    <script src="JS/searchFood.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

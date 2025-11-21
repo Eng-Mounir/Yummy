@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Details</title>
+
+    <link rel="icon" type="image/png" href="imgs/logo.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <!-- LEFT FIXED MINI NAVBAR -->
+    <div class="left-navbar d-flex flex-column justify-content-between align-items-center">
+
+        <!-- Logo -->
+        <img src="imgs/logo.png" class="logo-img" alt="logo">
+
+        <!-- Open Button -->
+        <div id="openSidebar" class="menu-btn fs-1 fw-bold">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Bottom Icons -->
+        <div class="bottom-icons d-flex flex-column gap-3">
+            <i class="fa-solid fa-globe"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+        </div>
+    </div>
+
+    <!-- SLIDING SIDEBAR -->
+    <div id="sidebar" class="sidebar text-white p-3 d-flex flex-column justify-content-between">
+        <ul class="list-unstyled px-3 fs-5">
+            <li class="py-2"><a href="searchFood.html" class="text-white text-decoration-none">Search</a></li>
+            <li class="py-2"><a href="category.html" class="text-white text-decoration-none">Categories</a></li>
+            <li class="py-2"><a href="#" class="text-white text-decoration-none">Area</a></li>
+            <li class="py-2"><a href="#" class="text-white text-decoration-none">Ingredients</a></li>
+            <li class="py-2"><a href="contactValidation.html" class="text-white text-decoration-none">Contact Us</a>
+            </li>
+        </ul>
+        <footer>
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="footer">
+                <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="content" class="content">
+        <main>
+            <div class="container py-5 h-100">
+                <div class="row py-5 g-4">
+                    <!-- <div class="col-md-4">
+                        <div class="image-content">
+                            <img src="imgs/1.jpg" class="w-100" alt="">
+                            <h2 class="text-white text-center">helooooo</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-8 text-white">
+                        <h2>Instructions</h2>
+                        <p>
+                            1. Blend all the mousse ingredients together in your food processor until smooth. Add the cacao powder first and, as you
+                            blend, have all the ingredients to hand in order to adjust the ratios slightly as the size of avocados and bananas
+                            varies so much. The perfect ratio in order to avoid the dish tasting too much of either is to use equal amounts of both.
+                            2. Taste and add a few drops of stevia if you feel you need more sweetness. 3. Fill little cups or shot glasses with the
+                            mousse, sprinkle with the cacao powder or nibs and serve. Tip If you don’t have a frozen banana to hand you can just use
+                            a normal one and then chill the mousse before serving for a cooling dessert..
+                        </p>
+                        <h3><span class="fw-bolder">Area :</span> Argentinian</h3>
+                        <h3><span class="fw-bolder">Category :</span> Beef</h3>
+
+                        <h3>Recipes :</h3>
+                        <ul class="list-unstyled d-flex flex-wrap g-3">
+                            <li class="alert alert-info m-2 p-1">2kg Mixed Beef Cuts</li>
+                            <li class="alert alert-info m-2 p-1">4 Chorizo</li>
+                            <li class="alert alert-info m-2 p-1">2 Morcilla</li>
+                            <li class="alert alert-info m-2 p-1">To taste Salt</li>
+                        </ul>
+
+                        <h3>Tags :</h3>
+                        <ul class="list-unstyled d-flex flex-wrap g-3">
+                            <!-- Add tags here if needed -->
+                        <!-- </ul>
+
+                        <a target="_blank"
+                            href="https://www.munchery.com/blog/the-ten-iconic-dishes-of-argentina-and-how-to-cook-them-at-home/"
+                            class="btn btn-success me-2">Source</a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=q5f6Z6i1hQ8"
+                            class="btn btn-danger">Youtube</a> -->
+                    </div> 
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="JS/main.js"></script>
+    <script src="JS/displayFoodDetails.js"></script>
+    <script src="JS/category.js"></script>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
