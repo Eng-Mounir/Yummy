@@ -65,7 +65,7 @@
 
     <!-- CONTACT PAGE -->
     <div id="content" class="content">
-        <div class="container-50 py-5">
+        <div class="container py-5">
                         <div
                             class="loading d-flex justify-content-center align-items-center vh-100 position-fixed top-0 bottom-0 end-0 start-0 bg-black opacity-75 d-none">
                             <span class="loader"></span>
@@ -77,37 +77,37 @@
                         <div class="col-md-6">
                             <input id="userName" onkeyup="validateName()" type="text" class="form-control"
                                 placeholder="Enter Your Name">
-                            <p id="nameMsg" class="text-danger d-none">Name must be at least 3 characters</p>
+                            <p id="nameMsg" class="text-danger d-none alert alert-danger">Name must be at least 3 characters</p>
                         </div>
 
                         <div class="col-md-6">
                             <input id="userEmail" onkeyup="validateEmail()" type="email" class="form-control"
                                 placeholder="Enter Your Email">
-                            <p id="emailMsg" class="text-danger d-none">Enter a valid email</p>
+                            <p id="emailMsg" class="text-danger d-none alert alert-danger">Enter a valid email</p>
                         </div>
 
                         <div class="col-md-6">
                             <input id="userPhone" onkeyup="validatePhone()" type="text" class="form-control"
                                 placeholder="Enter Your Phone">
-                            <p id="phoneMsg" class="text-danger d-none">Valid Egyptian number (010/011/012/015)</p>
+                            <p id="phoneMsg" class="text-danger d-none alert alert-danger">Valid Egyptian number (010/011/012/015)</p>
                         </div>
 
                         <div class="col-md-6">
                             <input id="userAge" onkeyup="validateAge()" type="number" class="form-control"
                                 placeholder="Enter Your Age">
-                            <p id="ageMsg" class="text-danger d-none">Age must be between 16 and 80</p>
+                            <p id="ageMsg" class="text-danger d-none alert alert-danger">Age must be between 16 and 80</p>
                         </div>
 
                         <div class="col-md-6">
                             <input id="userPass" onkeyup="validatePass()" type="password" class="form-control"
                                 placeholder="Enter Your Password">
-                            <p id="passMsg" class="text-danger d-none">Password must be 8+ characters</p>
+                            <p id="passMsg" class="text-danger d-none alert alert-danger">Enter valid password (8 characters, at least one letter and one number)</p>
                         </div>
 
                         <div class="col-md-6">
                             <input id="userRepass" onkeyup="validateRepass()" type="password" class="form-control"
                                 placeholder="Re-enter Password">
-                            <p id="repassMsg" class="text-danger d-none">Passwords do not match</p>
+                            <p id="repassMsg" class="text-danger d-none alert alert-danger">Passwords do not match</p>
                         </div>
                         <div class="col-12">
                             <button type="submit" class="btn btn-dark w-100">Submit</button>

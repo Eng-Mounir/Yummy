@@ -1,6 +1,6 @@
 // this is common with are . search , category and ingerdiance
 const row = document.querySelector(".row");
-
+const loadingIcon = document.querySelector(".loading");
 // Get meal ID from URL
 const urlParams = new URLSearchParams(window.location.search);
 const mealId = urlParams.get("id");

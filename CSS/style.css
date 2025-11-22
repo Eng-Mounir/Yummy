@@ -163,3 +163,11 @@ img {
 }
 
 
+.allFields {
+    margin-left: 70px;
+    transition: margin-left 0.5s ease;
+}
+
+.allFields.shift {
+    margin-left: 350px;
+}

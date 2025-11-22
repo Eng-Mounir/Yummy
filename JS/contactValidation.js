@@ -131,12 +131,12 @@ function validateAge() {
     msg.classList.remove("d-none");
     return false;
 }
-
 function validatePass() {
     let input = document.getElementById("userPass");
     let msg = document.getElementById("passMsg");
 
-    let regex = /^[A-Za-z0-9]{8,}$/;
+    // Correct regex
+    let regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
     if (regex.test(input.value)) {
         input.classList.add("is-valid");

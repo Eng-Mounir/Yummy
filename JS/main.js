@@ -1,3 +1,5 @@
+const loadingIcon = document.querySelector(".loading");
+
 // API for searching by FIRST LETTER (a)
 async function getFirstByLetter() {
     loadingIcon.classList.remove("d-none");
