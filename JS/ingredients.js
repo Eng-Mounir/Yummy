@@ -1,11 +1,16 @@
+
+const loadingIcon = document.querySelector(".loading");
 // Fetch all ingredients
 async function getIngredients() {
+    loadingIcon.classList.remove("d-none");
     try {
         const response = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?i=list");
         const data = await response.json();
         displayIngredientsList(data.meals);
     } catch (error) {
         console.error("Error fetching ingredients:", error);
+    } finally {
+        loadingIcon.classList.add("d-none");
     }
 }
 
@@ -35,12 +40,15 @@ getIngredients();
 
 // Fetch meals for this ingredient
 async function getFoodByIngredient(ingredientName) {
+    loadingIcon.classList.remove("d-none");
     try {
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredientName}`);
         const data = await response.json();
         displayMealsFromIngredient(data.meals);
     } catch (error) {
         console.error("Error fetching ingredient meals:", error);
+    } finally {
+        loadingIcon.classList.add("d-none");
     }
 }
 
@@ -74,3 +82,6 @@ function displayMealsFromIngredient(meals) {
 function mealClicked(idMeal) {
     window.location.href = `foodDetails.html?id=${idMeal}`;
 }
+
+window.mealClicked = mealClicked;
+window.getFoodByIngredient=getFoodByIngredient

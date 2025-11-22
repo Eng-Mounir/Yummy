@@ -1,5 +1,7 @@
+const loadingIcon = document.querySelector(".loading");
 // Display all areas
 async function getAreas() {
+    loadingIcon.classList.remove("d-none");
     try {
         const response = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
         const data = await response.json();
@@ -7,7 +9,10 @@ async function getAreas() {
         displayAreas(data.meals);
     } catch (error) {
         console.error("Error fetching categories:", error);
-    }
+        } finally {
+            loadingIcon.classList.add("d-none");
+        }
+    
 }
 
 
@@ -29,6 +34,7 @@ getAreas();
 
 // Display all foods related to specific area
 async function getFoodByArea(areaName) {
+    loadingIcon.classList.remove("d-none");
     try {
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${areaName}`);
         const data = await response.json();
@@ -39,8 +45,11 @@ async function getFoodByArea(areaName) {
 
     } catch (error) {
         console.error("Error fetching foods:", error);
+        } finally {
+            loadingIcon.classList.add("d-none");
+        }
     }
-}
+
 
 
 // Render meals
@@ -76,4 +85,7 @@ function displayAreaMeals(data) {
 function mealClicked(idMeal) {
     window.location.href = `foodDetails.html?id=${idMeal}`;
 }
+window.getFoodByArea = getFoodByArea;
+window.mealClicked = mealClicked;
+
 

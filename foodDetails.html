@@ -16,6 +16,7 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/animation.css">
 </head>
 
 <body>
@@ -64,6 +65,10 @@
     <div id="content" class="content">
         <main>
             <div class="container py-5 h-100">
+                            <div
+                                class="loading d-flex justify-content-center align-items-center vh-100 position-fixed top-0 bottom-0 end-0 start-0 bg-black opacity-75 d-none">
+                                <span class="loader"></span>
+                            </div>
                 <div class="row py-5 g-4">
                     <!-- <div class="col-md-4">
                         <div class="image-content">
@@ -112,7 +117,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="JS/main.js"></script>
+<script src="JS/global/navbar.js"></script>
     <script src="JS/displayFoodDetails.js"></script>
     <script src="JS/category.js"></script>
     

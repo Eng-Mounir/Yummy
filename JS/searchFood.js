@@ -1,6 +1,6 @@
 let searchName = document.querySelector(".searchName");
 let searchLetter = document.querySelector("#searchLetter");
-
+const loadingIcon = document.querySelector(".loading");
 // Search by full meal name
 searchName.addEventListener("input", function () {
     getSearchName(searchName.value);
@@ -23,23 +23,29 @@ searchLetter.addEventListener("input", function () {
 
 // API for searching by NAME
 async function getSearchName(foodName = "") {
+    loadingIcon.classList.remove("d-none");
     try {
         let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${foodName}`);
         let data = await response.json();
         displayFood(data.meals);
     } catch (error) {
         console.log(error.message);
+    } finally {
+        loadingIcon.classList.add("d-none");
     }
 }
 
 // API for searching by FIRST LETTER
 async function getSearchByLetter(letter = "") {
+    loadingIcon.classList.remove("d-none");
     try {
         let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`);
         let data = await response.json();
         displayFood(data.meals);
     } catch (error) {
         console.log(error.message);
+    } finally {
+        loadingIcon.classList.add("d-none");
     }
 }
 
@@ -79,6 +85,4 @@ getSearchName("a");
 function mealClicked(idMeal) {
     window.location.href = `foodDetails.html?id=${idMeal}`;
 }
-
-
-
+window.mealClicked = mealClicked;

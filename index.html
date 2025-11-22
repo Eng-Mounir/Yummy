@@ -16,55 +16,77 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/animation.css">
 </head>
 
 <body><!-- LEFT FIXED MINI NAVBAR -->
-<div class="left-navbar d-flex flex-column justify-content-between align-items-center">
+    <div class="left-navbar d-flex flex-column justify-content-between align-items-center">
 
-    <!-- Logo -->
-    <img src="imgs/logo.png" class="logo-img" alt="logo">
+        <!-- Logo -->
+        <img src="imgs/logo.png" class="logo-img" alt="logo">
 
-    <!-- Open Button -->
-    <div id="openSidebar" class="menu-btn fs-1 fw-bold">
-        <i class="fa-solid fa-bars"></i>
-    </div>
+        <!-- Open Button -->
+        <div id="openSidebar" class="menu-btn fs-1 fw-bold">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
-    <!-- Bottom Icons -->
-    <div class="bottom-icons d-flex flex-column gap-3">
-        <i class="fa-solid fa-globe"></i>
-        <i class="fa-solid fa-share-nodes"></i>
-    </div>
-</div>
-
-<!-- SLIDING SIDEBAR -->
-<div id="sidebar" class="sidebar text-white p-3 d-flex flex-column justify-content-between">
-    <ul class="list-unstyled px-3 fs-5">
-        <li class="py-2 "><a href="searchFood.html" class="text-white text-decoration-none">Search</a></li>
-        <li class="py-2">
-            <a href="category.html" class="text-white text-decoration-none">Categories</a>
-        </li>
-
-        <li class="py-2"><a href="area.html" class="text-white text-decoration-none">Area</a></li>
-        <li class="py-2"><a href="ingredients.html" class="text-white text-decoration-none">Ingredients</a></li>
-        <li class="py-2"><a href="contactValidation.html" class="text-white text-decoration-none">Contact Us</a>
-        </li>
-    </ul>
-    <footer>
-        <div class="icons">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
+        <!-- Bottom Icons -->
+        <div class="bottom-icons d-flex flex-column gap-3">
             <i class="fa-solid fa-globe"></i>
+            <i class="fa-solid fa-share-nodes"></i>
         </div>
-        <div class="footer">
-            <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
-        </div>
-    </footer>
-</div>
-<div id="content" class="content">
-    <!-- page content -->
-</div>
+    </div>
 
-    <script src="JS/main.js"></script>
+    <!-- SLIDING SIDEBAR -->
+    <div id="sidebar" class="sidebar text-white p-3 d-flex flex-column justify-content-between">
+        <ul class="list-unstyled px-3 fs-5">
+            <li class="py-2 "><a href="searchFood.html" class="text-white text-decoration-none">Search</a></li>
+            <li class="py-2">
+                <a href="category.html" class="text-white text-decoration-none">Categories</a>
+            </li>
+
+            <li class="py-2"><a href="area.html" class="text-white text-decoration-none">Area</a></li>
+            <li class="py-2"><a href="ingredients.html" class="text-white text-decoration-none">Ingredients</a></li>
+            <li class="py-2"><a href="contactValidation.html" class="text-white text-decoration-none">Contact Us</a>
+            </li>
+        </ul>
+        <footer>
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="footer">
+                <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="container py-5">
+            <div
+                class="loading d-flex justify-content-center align-items-center vh-100 position-fixed top-0 bottom-0 end-0 start-0 bg-black opacity-75 d-none">
+                <span class="loader"></span>
+            </div>
+        <div id="content" class="content">
+
+            <div class="row row-cols-1 row-cols-md-4 g-3 justify-content-center g-4">
+                <!-- <div class="col">
+                            <div class="image-content position-relative">
+                                <div
+                                    class="layer bg-dark position-absolute top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center text-white">
+                                    <h3>hello</h3>
+                                    <p>alo</p>
+                                </div>
+        
+                                <img src="imgs/1.jpg" class="img-fluid">
+                            </div>
+                        </div> -->
+            </div>
+        </div>
+    </div>
+<script src="JS/global/navbar.js"></script>
+<script src="JS/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 
 </body>

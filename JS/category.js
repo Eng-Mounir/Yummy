@@ -73,23 +73,31 @@
 
 //         // Load categories on page load
 //         getCategories();
-const row = document.querySelector(".row");
+const categoryRow = document.querySelector(".row");
 const backBtn = document.getElementById("backBtn");
-
+ const loadingIcon = document.querySelector(".loading");
 // Display all categories
 async function getCategories() {
     backBtn.style.display = "none";
+    loadingIcon.classList.remove("d-none");
+
     try {
         const response = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php");
         const data = await response.json();
         displayCategories(data.categories);
+
     } catch (error) {
         console.error("Error fetching categories:", error);
+    }
+    finally {
+        loadingIcon.classList.add("d-none");
     }
 }
 
 function displayCategories(categories) {
-    row.innerHTML = categories.map(cat => `
+    categoryRow.innerHTML = categories
+        .map(
+            cat => `
         <div class="col">
             <div class="image-content position-relative" onclick="categoryClicked('${cat.strCategory}')">
                 <div class="layer bg-light opacity-75 position-absolute top-0 start-0 end-0 bottom-0 
@@ -100,23 +108,36 @@ function displayCategories(categories) {
                 <img src="${cat.strCategoryThumb}" class="img-fluid">
             </div>
         </div>
-    `).join('');
+    `
+        )
+        .join("");
 }
 
 // When category clicked
-async function categoryClicked(nameOfCategory) {
+ async function categoryClicked(nameOfCategory) {
+    loadingIcon.classList.remove("d-none");
+
     try {
-        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${nameOfCategory}`);
+        const response = await fetch(
+            `https://www.themealdb.com/api/json/v1/1/filter.php?c=${nameOfCategory}`
+        );
         const data = await response.json();
         displayMeals(data.meals);
+
     } catch (error) {
         console.error("Error fetching meals:", error);
+    }
+    finally {
+        loadingIcon.classList.add("d-none");
     }
 }
 
 function displayMeals(meals) {
     backBtn.style.display = "block";
-    row.innerHTML = meals.map(meal => `
+
+    categoryRow.innerHTML = meals
+        .map(
+            meal => `
         <div class="col">
             <div class="image-content position-relative" onclick="mealClicked('${meal.idMeal}')">
                 <div class="layer bg-light opacity-75 position-absolute top-0 start-0 end-0 bottom-0 
@@ -126,10 +147,15 @@ function displayMeals(meals) {
                 <img src="${meal.strMealThumb}" class="img-fluid">
             </div>
         </div>
-    `).join('');
+    `
+        )
+        .join("");
 }
 
-// Navigate to food details page the(id)
+// Load categories on page load
+getCategories();
+
+// Navigate to food details page
 function mealClicked(idMeal) {
     window.location.href = `foodDetails.html?id=${idMeal}`;
 }
@@ -138,8 +164,6 @@ function mealClicked(idMeal) {
 function backToCategories() {
     getCategories();
 }
-
-// Load categories on page load
-getCategories();
-
-
+window.categoryClicked = categoryClicked;
+window.mealClicked = mealClicked;
+window.backToCategories = backToCategories;
